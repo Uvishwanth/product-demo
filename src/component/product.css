@@ -1,0 +1,176 @@
+.font-adjustment {
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.font-color {
+    background-color: #5664f5;
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.font-color-text {
+    color: #3164f4;
+}
+
+.user-profile {
+    color: #5664f5;
+    background-color: white;
+    font-size: 38px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    transition: transform 1s ease;
+}
+
+.font-header-adjustment {
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.header {
+    font-family: 'poppins';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.init-border {
+    background-color: #f8f9fa;
+    border: 0.5px solid #e5e7eb;
+}
+
+.init-border-sidebar {
+    background-color: #ffffff;
+    border: 0.5px solid #e5e7eb;
+}
+
+#side-bar {
+    height: 400px;
+    width: 200px;
+}
+
+.dropdown-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    transition: transform 1s ease;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100px;
+    height: 250px;
+    transform: translate(30px,-50px);
+    background-color: #ffffff;
+    border: 0.5px solid #e5e7eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow: auto;
+    padding: 10px;
+    transition: transform 10s inset;
+}
+
+.dropdown-container:hover .dropdown-content .dropdown-arrow {
+    display: block;
+    transition: transform 3s inset;
+}
+
+.dropdown-container:hover .dropdown-arrow {
+    transform: rotate(-90deg);
+}
+
+.dropdown-container .dropdown-content {
+    display: block;
+}
+
+.dropdown-item{
+    color: black;
+    background-color: #ffffff;
+}
+
+.dropdown-item:hover{
+    color: rgb(0, 195, 255);
+    background-color: #e5e7eb;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 10px;
+    z-index: 5;
+}
+
+/* product demo page */
+
+.product-container{
+    padding: 50px;
+    height: 500px;
+    width:550px;
+}
+
+.product-dropdown{
+    position: relative;
+    cursor: pointer;
+}
+
+.product-dropdown-content{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 150px;
+    height: 90px;
+    transform: translate(20px,-25px);
+    /* background-color: #ffffff02; */
+    border: 0.5px solid #616161;
+    box-shadow: 0 2px 2px rgba(130, 130, 130, 0.1);
+    z-index: 1000;
+    overflow: auto;
+    padding: 5px;
+
+}
+
+.product-dropdown:hover .product-dropdown-content{
+    display: block;
+    transition: transform 1s ease;
+}
+
+
+.product-demo-font{
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(92, 92, 92);
+}
+
+.product-dropdown .product-dropdown-content{
+    display: block;
+}
+
+.product-dropdown-items{
+    color: black;
+    background-color: #ffffff02;
+    font-family: 'poppins';
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.product-dropdown-items:hover{
+    color: rgb(0, 132, 255);
+    background-color: #e5e7eb;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgb(253, 253, 253);
+}
+
+.product-font-adjustment {
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 16px;
+}
