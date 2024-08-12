@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from './navigation';
-import sampleProduct from '../Asset/images.jpeg'
+import GearViewer from './GearViewer';
+
 
 function Demo() {
   const [formData, setFormData] = useState({
@@ -36,27 +37,23 @@ function Demo() {
     console.log('Form submitted:', formData);
   };
 
+
   return (
     <div className="p-md-3 container-fluid">
       <Navigation data={'Product Demo'} />
       <div className="row p-md-4">
-        <div className="col-md-8">
-          <div className="container">
-            <div className="row justify-content-center">
-              <h2 className='text-center font-header-adjustment product-demo-font'>MODEL VIEW</h2>
-              <div className='p-md-5'>
-                <div className="container product-container init-border d-flex align-items-center rounded-2 justify-content-center border-2 shadow-sm ">
-                  <img
-                    src={sampleProduct}
-                    alt="Product Demo"
-                    className="img-fluid"
-                    style={{ height: '100%', width: '100%', }}
-                  />
-                </div>
-              </div>
+      <div className="col-md-8">
+      <div className="container">
+        <div className="row justify-content-center">
+          <h2 className='text-center font-header-adjustment product-demo-font'>MODEL VIEW</h2>
+          <div className=''>
+            <div className="container product-container d-flex align-items-center rounded-2 justify-content-center border-1 shadow">
+                <GearViewer/>
             </div>
           </div>
         </div>
+      </div>
+    </div>
         <div className="col-md-4">
           <div className="container">
             <div className="row justify-content-center">
