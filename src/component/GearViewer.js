@@ -33,3 +33,4 @@ const GearViewer = () => {
 };
 
 export default GearViewer;
+ 

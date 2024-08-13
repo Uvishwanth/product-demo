@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Navigation from './navigation';
 import GearViewer from './GearViewer';
+import { Link } from 'react-router-dom'
 
 
 function Demo() {
@@ -42,18 +43,23 @@ function Demo() {
     <div className="p-md-3 container-fluid">
       <Navigation data={'Product Demo'} />
       <div className="row p-md-4">
-      <div className="col-md-8">
-      <div className="container">
-        <div className="row justify-content-center">
-          <h2 className='text-center font-header-adjustment product-demo-font'>MODEL VIEW</h2>
-          <div className=''>
-            <div className="container product-container d-flex align-items-center rounded-2 justify-content-center border-1 shadow">
-                <GearViewer/>
+        <div className="col-md-8">
+          <div className="container">
+            <div className="row justify-content-center">
+              <h2 className='text-center font-header-adjustment product-demo-font'>MODEL VIEW</h2>
+              <div className=''>
+                <div className="container product-container d-flex align-items-center rounded-2 justify-content-center border-1 shadow">
+                  <Suspense fallback={<div>Loading model...</div>}>
+                    <GearViewer />
+                  </Suspense>
+                  {/* {startTransition(() => (
+                   
+                  ))} */}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
         <div className="col-md-4">
           <div className="container">
             <div className="row justify-content-center">
@@ -206,7 +212,7 @@ function Demo() {
                       {
                         isDropdownOpen && (
                           <div className="container z-1000 product-dropdown-content rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-around">
-                            <div className='product-dropdown-items z-100 py-md-1 px-2 w-100 d-flex align-items-center justify-content-between'>Generate PDF <i className="fa-solid fa-chevron-right ps-2"></i></div>
+                            <Link to={'/home'} className='product-dropdown-items z-100 py-md-1 px-2 w-100 d-flex align-items-center justify-content-between'>Generate PDF <i className="fa-solid fa-chevron-right ps-2"></i></Link>
                             <div className='product-dropdown-items z-100 py-md-1  px-2 w-100 d-flex align-items-center justify-content-between'>Send Email <i className="fa-solid fa-chevron-right ps-2"></i></div>
                           </div>
                         )
